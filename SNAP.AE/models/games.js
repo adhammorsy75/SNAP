@@ -1,13 +1,15 @@
-const {Schema} = require('mongoose')
+const { Schema, Types } = require('mongoose');
 
-const menuSchema = new Schema(
-    {        
-        name: {type: String, required: true},
-        base_price: {type: Number, required: true},   
-        description: {type: String },    
-        image:{type: String }
-    },
-    {timestamps: true}
-)
+const gameSchema = new Schema(
+  {
+    title: { type: String, required: true },
+    price: { type: Number, required: true },
+    description: { type: String },
+    image: { type: String },
+    genres: [{ type: Types.ObjectId, ref: 'Genre' }],
+    platforms: [{ type: Types.ObjectId, ref: 'Platform' }],
+  },
+  { timestamps: true }
+);
 
-module.exports = menuSchema
+module.exports = gameSchema;
