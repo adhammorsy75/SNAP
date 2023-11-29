@@ -1,0 +1,6 @@
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    background-color: black; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+}
