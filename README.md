@@ -1,2 +1,2 @@
-# SNAP.AE
-SNAP.AE
+# SNAP
+SNAP
