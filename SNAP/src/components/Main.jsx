@@ -10,7 +10,7 @@ const Main = () => {
         <>
             <Nav />
             <Routes>
-                <Route path="/cover" element={<Cover />} />
+                <Route path="/" element={<Cover />} />
                 <Route path="/banner" element={<Banner />} />
             </Routes>
         </>
