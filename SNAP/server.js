@@ -10,7 +10,7 @@ const gamesController = require('./controllers/gamesController')
 const userController = require('./controllers/userController')
 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3015
 
 
 //middleware
@@ -32,12 +32,11 @@ app.put('/carts/:cartId/', cartController.updateCurrentOrderInCart)
 
 
 
-//Menus Routes
-app.get('/games/', menuController.getAllMenus)
-app.get('/games/:id', menuController.getOneMenu)
-app.post('/menus/', menuController.createNewMenu)
-app.put('/menus/:id', menuController.updateMenu)
-app.delete('/menus/:id', menuController.deleteMenu)
+app.get('/games/', gamesController.getAllGames);
+app.get('/games/:id', gamesController.getOneGame);
+app.post('/games/', gamesController.createNewGame);
+app.put('/games/:id', gamesController.updateGame);
+app.delete('/games/:id', gamesController.deleteGame);
 
 
 //Users Routes
